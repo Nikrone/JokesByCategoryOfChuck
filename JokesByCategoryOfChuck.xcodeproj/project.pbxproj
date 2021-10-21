@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		71E7BA8227219083006F060F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA8127219083006F060F /* AppDelegate.swift */; };
 		71E7BA8427219083006F060F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA8327219083006F060F /* SceneDelegate.swift */; };
-		71E7BA8627219083006F060F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA8527219083006F060F /* ViewController.swift */; };
-		71E7BA8927219083006F060F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E7BA8727219083006F060F /* Main.storyboard */; };
 		71E7BA8C27219083006F060F /* JokesByCategoryOfChuck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA8A27219083006F060F /* JokesByCategoryOfChuck.xcdatamodeld */; };
 		71E7BA8E27219085006F060F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E7BA8D27219085006F060F /* Assets.xcassets */; };
 		71E7BA9127219085006F060F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E7BA8F27219085006F060F /* LaunchScreen.storyboard */; };
+		71E7BA9B27219323006F060F /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E7BA9827219323006F060F /* Categories.storyboard */; };
+		71E7BA9C27219323006F060F /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA9927219323006F060F /* CategoriesPresenter.swift */; };
+		71E7BA9D27219323006F060F /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA9A27219323006F060F /* CategoriesViewController.swift */; };
+		71E7BAA22721992F006F060F /* Joke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E7BA9F2721992F006F060F /* Joke.storyboard */; };
+		71E7BAA32721992F006F060F /* JokePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BAA02721992F006F060F /* JokePresenter.swift */; };
+		71E7BAA42721992F006F060F /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BAA12721992F006F060F /* JokeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		71E7BA7E27219083006F060F /* JokesByCategoryOfChuck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokesByCategoryOfChuck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E7BA8127219083006F060F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71E7BA8327219083006F060F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		71E7BA8527219083006F060F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		71E7BA8827219083006F060F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71E7BA8B27219083006F060F /* JokesByCategoryOfChuck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JokesByCategoryOfChuck.xcdatamodel; sourceTree = "<group>"; };
 		71E7BA8D27219085006F060F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71E7BA9027219085006F060F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71E7BA9227219085006F060F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71E7BA9827219323006F060F /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
+		71E7BA9927219323006F060F /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
+		71E7BA9A27219323006F060F /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		71E7BA9F2721992F006F060F /* Joke.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Joke.storyboard; sourceTree = "<group>"; };
+		71E7BAA02721992F006F060F /* JokePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokePresenter.swift; sourceTree = "<group>"; };
+		71E7BAA12721992F006F060F /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +68,34 @@
 			children = (
 				71E7BA8127219083006F060F /* AppDelegate.swift */,
 				71E7BA8327219083006F060F /* SceneDelegate.swift */,
-				71E7BA8527219083006F060F /* ViewController.swift */,
-				71E7BA8727219083006F060F /* Main.storyboard */,
+				71E7BA9E2721932E006F060F /* Categories */,
+				71E7BAA52721993B006F060F /* Joke */,
 				71E7BA8D27219085006F060F /* Assets.xcassets */,
 				71E7BA8F27219085006F060F /* LaunchScreen.storyboard */,
 				71E7BA9227219085006F060F /* Info.plist */,
 				71E7BA8A27219083006F060F /* JokesByCategoryOfChuck.xcdatamodeld */,
 			);
 			path = JokesByCategoryOfChuck;
+			sourceTree = "<group>";
+		};
+		71E7BA9E2721932E006F060F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				71E7BA9827219323006F060F /* Categories.storyboard */,
+				71E7BA9927219323006F060F /* CategoriesPresenter.swift */,
+				71E7BA9A27219323006F060F /* CategoriesViewController.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		71E7BAA52721993B006F060F /* Joke */ = {
+			isa = PBXGroup;
+			children = (
+				71E7BA9F2721992F006F060F /* Joke.storyboard */,
+				71E7BAA02721992F006F060F /* JokePresenter.swift */,
+				71E7BAA12721992F006F060F /* JokeViewController.swift */,
+			);
+			path = Joke;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +158,8 @@
 			files = (
 				71E7BA9127219085006F060F /* LaunchScreen.storyboard in Resources */,
 				71E7BA8E27219085006F060F /* Assets.xcassets in Resources */,
-				71E7BA8927219083006F060F /* Main.storyboard in Resources */,
+				71E7BA9B27219323006F060F /* Categories.storyboard in Resources */,
+				71E7BAA22721992F006F060F /* Joke.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +170,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71E7BA8627219083006F060F /* ViewController.swift in Sources */,
 				71E7BA8227219083006F060F /* AppDelegate.swift in Sources */,
+				71E7BAA42721992F006F060F /* JokeViewController.swift in Sources */,
+				71E7BA9D27219323006F060F /* CategoriesViewController.swift in Sources */,
 				71E7BA8427219083006F060F /* SceneDelegate.swift in Sources */,
+				71E7BAA32721992F006F060F /* JokePresenter.swift in Sources */,
 				71E7BA8C27219083006F060F /* JokesByCategoryOfChuck.xcdatamodeld in Sources */,
+				71E7BA9C27219323006F060F /* CategoriesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		71E7BA8727219083006F060F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				71E7BA8827219083006F060F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		71E7BA8F27219085006F060F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -298,7 +322,7 @@
 				INFOPLIST_FILE = JokesByCategoryOfChuck/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Categories;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,7 +350,7 @@
 				INFOPLIST_FILE = JokesByCategoryOfChuck/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Categories;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
