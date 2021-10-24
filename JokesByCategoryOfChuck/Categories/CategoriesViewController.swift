@@ -16,6 +16,7 @@ protocol CategoriesViewProtocol: AnyObject {
 
 class CategoriesViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     
@@ -38,6 +39,7 @@ extension CategoriesViewController: CategoriesViewProtocol {
 
 }
 
+// MARK: - Table View
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.numberOfCategories()
