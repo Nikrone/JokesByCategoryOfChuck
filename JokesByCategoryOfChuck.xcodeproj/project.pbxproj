@@ -18,7 +18,7 @@
 		71E7BAA22721992F006F060F /* Joke.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E7BA9F2721992F006F060F /* Joke.storyboard */; };
 		71E7BAA32721992F006F060F /* JokePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BAA02721992F006F060F /* JokePresenter.swift */; };
 		71E7BAA42721992F006F060F /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BAA12721992F006F060F /* JokeViewController.swift */; };
-		71E7BAA72722D54B006F060F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BAA62722D54B006F060F /* Category.swift */; };
+		71E7BAA72722D54B006F060F /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BAA62722D54B006F060F /* Joke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		71E7BA9F2721992F006F060F /* Joke.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Joke.storyboard; sourceTree = "<group>"; };
 		71E7BAA02721992F006F060F /* JokePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokePresenter.swift; sourceTree = "<group>"; };
 		71E7BAA12721992F006F060F /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
-		71E7BAA62722D54B006F060F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		71E7BAA62722D54B006F060F /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 			children = (
 				71E7BA8127219083006F060F /* AppDelegate.swift */,
 				71E7BA8327219083006F060F /* SceneDelegate.swift */,
-				71E7BAA62722D54B006F060F /* Category.swift */,
+				71E7BAA62722D54B006F060F /* Joke.swift */,
 				71E7BA9E2721932E006F060F /* Categories */,
 				71E7BAA52721993B006F060F /* Joke */,
 				71E7BA8D27219085006F060F /* Assets.xcassets */,
@@ -180,7 +180,7 @@
 				71E7BAA32721992F006F060F /* JokePresenter.swift in Sources */,
 				71E7BA8C27219083006F060F /* JokesByCategoryOfChuck.xcdatamodeld in Sources */,
 				71E7BA9C27219323006F060F /* CategoriesPresenter.swift in Sources */,
-				71E7BAA72722D54B006F060F /* Category.swift in Sources */,
+				71E7BAA72722D54B006F060F /* Joke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

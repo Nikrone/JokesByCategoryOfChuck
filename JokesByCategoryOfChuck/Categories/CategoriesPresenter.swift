@@ -36,9 +36,10 @@ class CategoriesPresenter: CategoriesPresenterProtocol {
             let decoder = JSONDecoder()
             let categories = try? decoder.decode([String].self, from: data)
             self.categories = categories ?? []
-            self.view?.reloadData()
+            DispatchQueue.main.async {
+                self.view?.reloadData()
+            }
         }.resume()
-        
     }
     
     func category(for indexPath: IndexPath) -> String {

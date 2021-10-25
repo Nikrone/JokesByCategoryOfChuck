@@ -53,7 +53,9 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let jokeVC = UIStoryboard(name: "Joke", bundle: Bundle.main).instantiateViewController(withIdentifier: "JokeViewController") as? JokeViewController else {return}
+        jokeVC.presenter = JokePresenter(category: presenter.category(for: indexPath))
+        navigationController?.pushViewController(jokeVC, animated: true)
     }
     
     

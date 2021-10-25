@@ -15,7 +15,7 @@ protocol JokeViewProtocol: AnyObject {
 
 class JokeViewController: UIViewController {
 
-	var presenter: JokePresenterProtocol = JokePresenter()
+    var presenter: JokePresenterProtocol!
 
 	override func viewDidLoad() {
         super.viewDidLoad()

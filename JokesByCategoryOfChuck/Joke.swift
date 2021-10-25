@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct Categories: Codable {
-    let categories: [String]
+struct Joke: Codable {
+    let icon_url: String
+    let value: String
+    
+    
 }
