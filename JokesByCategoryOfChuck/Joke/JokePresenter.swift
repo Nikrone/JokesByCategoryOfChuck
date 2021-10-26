@@ -23,9 +23,9 @@ class JokePresenter: JokePresenterProtocol {
     init(category: String) {
         self.category = category
     }
-
+    
     weak var view: JokeViewProtocol?
-
+    
     func viewDidLoad() {
         guard let url = URL(string: "https://api.chucknorris.io/jokes/random?category=\(category)") else {return}
         let request = URLRequest(
@@ -38,6 +38,16 @@ class JokePresenter: JokePresenterProtocol {
             let decoder = JSONDecoder()
             let joke = try? decoder.decode(Joke.self, from: data)
             self.joke = joke
+            DispatchQueue.main.async {
+                self.view?.updateImageView(
+                    with: try! Data(
+                        contentsOf: URL(
+                            string: joke!.icon_url
+                        )!
+                    )
+                )
+                self.view?.updateJokeLabel(with: joke?.value ?? "")
+            }
         }.resume()
     }
 }

@@ -58,5 +58,4 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(jokeVC, animated: true)
     }
     
-    
 }

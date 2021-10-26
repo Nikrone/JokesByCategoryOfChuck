@@ -39,18 +39,22 @@
                             <constraint firstItem="Yta-Lx-beg" firstAttribute="leading" secondItem="lO1-Lq-3c2" secondAttribute="leading" constant="16" id="DaM-Ye-HaH"/>
                             <constraint firstItem="WLi-Tk-3Pm" firstAttribute="centerX" secondItem="dHv-Ld-GZd" secondAttribute="centerX" id="ExJ-j1-XyE"/>
                             <constraint firstItem="lO1-Lq-3c2" firstAttribute="trailing" secondItem="WLi-Tk-3Pm" secondAttribute="trailing" constant="16" id="JrN-TP-TNH"/>
-                            <constraint firstItem="lO1-Lq-3c2" firstAttribute="bottom" secondItem="Yta-Lx-beg" secondAttribute="bottom" constant="584.5" id="NQa-y5-pb1"/>
                             <constraint firstItem="lO1-Lq-3c2" firstAttribute="trailing" secondItem="Yta-Lx-beg" secondAttribute="trailing" constant="16" id="QyX-d4-RXD"/>
                             <constraint firstItem="abr-ng-gcG" firstAttribute="centerX" secondItem="dHv-Ld-GZd" secondAttribute="centerX" id="UxP-AI-DWH"/>
                             <constraint firstItem="abr-ng-gcG" firstAttribute="centerX" secondItem="dHv-Ld-GZd" secondAttribute="centerX" id="YPX-aH-Urh"/>
                             <constraint firstItem="Yta-Lx-beg" firstAttribute="centerX" secondItem="dHv-Ld-GZd" secondAttribute="centerX" id="f4I-XL-cHo"/>
                             <constraint firstItem="lO1-Lq-3c2" firstAttribute="trailing" secondItem="abr-ng-gcG" secondAttribute="trailing" constant="100" id="hXa-Y7-CgE"/>
                             <constraint firstItem="WLi-Tk-3Pm" firstAttribute="top" secondItem="lO1-Lq-3c2" secondAttribute="top" id="iAL-n8-eKz"/>
-                            <constraint firstItem="abr-ng-gcG" firstAttribute="top" secondItem="WLi-Tk-3Pm" secondAttribute="bottom" constant="32" id="tNT-rI-nOo"/>
-                            <constraint firstItem="Yta-Lx-beg" firstAttribute="top" secondItem="abr-ng-gcG" secondAttribute="bottom" constant="32" id="uLe-il-VRt"/>
+                            <constraint firstItem="abr-ng-gcG" firstAttribute="top" secondItem="WLi-Tk-3Pm" secondAttribute="bottom" constant="32" id="kbD-JC-GEV"/>
+                            <constraint firstItem="lO1-Lq-3c2" firstAttribute="bottom" secondItem="Yta-Lx-beg" secondAttribute="bottom" priority="900" constant="584.5" id="qeW-4x-8qT"/>
+                            <constraint firstItem="Yta-Lx-beg" firstAttribute="top" secondItem="abr-ng-gcG" secondAttribute="bottom" priority="900" constant="32" id="uLe-il-VRt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oQf-fd-ERs"/>
+                    <connections>
+                        <outlet property="imageView" destination="abr-ng-gcG" id="J9Z-Lo-B4H"/>
+                        <outlet property="textLabel" destination="Yta-Lx-beg" id="e7R-5O-PnA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7B-uH-bVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

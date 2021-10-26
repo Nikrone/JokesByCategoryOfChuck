@@ -10,10 +10,14 @@
 import UIKit
 
 protocol JokeViewProtocol: AnyObject {
-    
+    func updateImageView(with data: Data)
+    func updateJokeLabel(with joke: String)
 }
 
 class JokeViewController: UIViewController {
+    
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var textLabel: UILabel!
 
     var presenter: JokePresenterProtocol!
 
@@ -27,5 +31,12 @@ class JokeViewController: UIViewController {
 }
 
 extension JokeViewController: JokeViewProtocol {
+    func updateImageView(with data: Data) {
+        imageView.image = UIImage(data: data)
+    }
+    
+    func updateJokeLabel(with joke: String) {
+        textLabel.text = joke
+    }
     
 }
