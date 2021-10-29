@@ -8,9 +8,10 @@
 //
 
 import UIKit
+import SDWebImage
 
 protocol JokeViewProtocol: AnyObject {
-    func updateImageView(with data: Data)
+    func updateImageView()
     func updateJokeLabel(with joke: String)
 }
 
@@ -23,7 +24,7 @@ class JokeViewController: UIViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         presenter.view = self
         presenter.viewDidLoad()
     }
@@ -31,8 +32,8 @@ class JokeViewController: UIViewController {
 }
 
 extension JokeViewController: JokeViewProtocol {
-    func updateImageView(with data: Data) {
-        imageView.image = UIImage(data: data)
+    func updateImageView() {
+        imageView.sd_setImage(with: URL(string: "https://assets.chucknorris.host/img/avatar/chuck-norris.png"))
     }
     
     func updateJokeLabel(with joke: String) {

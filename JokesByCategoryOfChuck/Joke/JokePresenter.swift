@@ -8,6 +8,9 @@
 //
 
 import Foundation
+import UIKit
+import MBProgressHUD
+import SDWebImage
 
 // MARK: View -
 protocol JokePresenterProtocol {
@@ -39,15 +42,17 @@ class JokePresenter: JokePresenterProtocol {
             let joke = try? decoder.decode(Joke.self, from: data)
             self.joke = joke
             DispatchQueue.main.async {
-                self.view?.updateImageView(
-                    with: try! Data(
-                        contentsOf: URL(
-                            string: joke!.icon_url
-                        )!
-                    )
-                )
+//                self.view?.updateImageView(
+//                    with: try! Data(
+//                        contentsOf: URL(
+//                            string: joke!.icon_url
+//                        )!
+//                    )
+//                )
                 self.view?.updateJokeLabel(with: joke?.value ?? "")
             }
         }.resume()
+        
+        self.view?.updateImageView()
     }
 }

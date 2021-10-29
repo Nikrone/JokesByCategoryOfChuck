@@ -9,6 +9,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 protocol CategoriesPresenterProtocol {
     var view: CategoriesViewProtocol? { get set }

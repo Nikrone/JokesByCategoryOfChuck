@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		717A5535272C4C9500C3513F /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A5534272C4C9500C3513F /* Categories.swift */; };
 		71E7BA8227219083006F060F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA8127219083006F060F /* AppDelegate.swift */; };
 		71E7BA8427219083006F060F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA8327219083006F060F /* SceneDelegate.swift */; };
 		71E7BA8C27219083006F060F /* JokesByCategoryOfChuck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA8A27219083006F060F /* JokesByCategoryOfChuck.xcdatamodeld */; };
@@ -19,9 +20,11 @@
 		71E7BAA32721992F006F060F /* JokePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BAA02721992F006F060F /* JokePresenter.swift */; };
 		71E7BAA42721992F006F060F /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BAA12721992F006F060F /* JokeViewController.swift */; };
 		71E7BAA72722D54B006F060F /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BAA62722D54B006F060F /* Joke.swift */; };
+		E6B9E3410F4AFD840C22D77E /* Pods_JokesByCategoryOfChuck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEC9C05F73072D952D2B17C /* Pods_JokesByCategoryOfChuck.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		717A5534272C4C9500C3513F /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		71E7BA7E27219083006F060F /* JokesByCategoryOfChuck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokesByCategoryOfChuck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E7BA8127219083006F060F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71E7BA8327219083006F060F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		71E7BAA02721992F006F060F /* JokePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokePresenter.swift; sourceTree = "<group>"; };
 		71E7BAA12721992F006F060F /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 		71E7BAA62722D54B006F060F /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		C01DD6FBC93153EDF1BE8517 /* Pods-JokesByCategoryOfChuck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JokesByCategoryOfChuck.release.xcconfig"; path = "Target Support Files/Pods-JokesByCategoryOfChuck/Pods-JokesByCategoryOfChuck.release.xcconfig"; sourceTree = "<group>"; };
+		EAEC9C05F73072D952D2B17C /* Pods_JokesByCategoryOfChuck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JokesByCategoryOfChuck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F45DA56345EBB5D6E156FFFC /* Pods-JokesByCategoryOfChuck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JokesByCategoryOfChuck.debug.xcconfig"; path = "Target Support Files/Pods-JokesByCategoryOfChuck/Pods-JokesByCategoryOfChuck.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +49,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6B9E3410F4AFD840C22D77E /* Pods_JokesByCategoryOfChuck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42740F5E9A54214ABC6C5A3F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F45DA56345EBB5D6E156FFFC /* Pods-JokesByCategoryOfChuck.debug.xcconfig */,
+				C01DD6FBC93153EDF1BE8517 /* Pods-JokesByCategoryOfChuck.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		717A5533272C4C7100C3513F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				717A5534272C4C9500C3513F /* Categories.swift */,
+				71E7BAA62722D54B006F060F /* Joke.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		71E7BA7527219083006F060F = {
 			isa = PBXGroup;
 			children = (
 				71E7BA8027219083006F060F /* JokesByCategoryOfChuck */,
 				71E7BA7F27219083006F060F /* Products */,
+				42740F5E9A54214ABC6C5A3F /* Pods */,
+				AE94518D833866639163C69E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,7 +98,7 @@
 			children = (
 				71E7BA8127219083006F060F /* AppDelegate.swift */,
 				71E7BA8327219083006F060F /* SceneDelegate.swift */,
-				71E7BAA62722D54B006F060F /* Joke.swift */,
+				717A5533272C4C7100C3513F /* Models */,
 				71E7BA9E2721932E006F060F /* Categories */,
 				71E7BAA52721993B006F060F /* Joke */,
 				71E7BA8D27219085006F060F /* Assets.xcassets */,
@@ -101,6 +129,14 @@
 			path = Joke;
 			sourceTree = "<group>";
 		};
+		AE94518D833866639163C69E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAEC9C05F73072D952D2B17C /* Pods_JokesByCategoryOfChuck.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71E7BA9527219085006F060F /* Build configuration list for PBXNativeTarget "JokesByCategoryOfChuck" */;
 			buildPhases = (
+				086BCC914E3587344D68F4EE /* [CP] Check Pods Manifest.lock */,
 				71E7BA7A27219083006F060F /* Sources */,
 				71E7BA7B27219083006F060F /* Frameworks */,
 				71E7BA7C27219083006F060F /* Resources */,
+				9F520DB93B565585DCA4F8C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +206,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		086BCC914E3587344D68F4EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JokesByCategoryOfChuck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F520DB93B565585DCA4F8C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JokesByCategoryOfChuck/Pods-JokesByCategoryOfChuck-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JokesByCategoryOfChuck/Pods-JokesByCategoryOfChuck-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JokesByCategoryOfChuck/Pods-JokesByCategoryOfChuck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		71E7BA7A27219083006F060F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -178,6 +258,7 @@
 				71E7BA9D27219323006F060F /* CategoriesViewController.swift in Sources */,
 				71E7BA8427219083006F060F /* SceneDelegate.swift in Sources */,
 				71E7BAA32721992F006F060F /* JokePresenter.swift in Sources */,
+				717A5535272C4C9500C3513F /* Categories.swift in Sources */,
 				71E7BA8C27219083006F060F /* JokesByCategoryOfChuck.xcdatamodeld in Sources */,
 				71E7BA9C27219323006F060F /* CategoriesPresenter.swift in Sources */,
 				71E7BAA72722D54B006F060F /* Joke.swift in Sources */,
@@ -316,6 +397,7 @@
 		};
 		71E7BA9627219085006F060F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F45DA56345EBB5D6E156FFFC /* Pods-JokesByCategoryOfChuck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,6 +426,7 @@
 		};
 		71E7BA9727219085006F060F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C01DD6FBC93153EDF1BE8517 /* Pods-JokesByCategoryOfChuck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

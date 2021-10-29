@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,16 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="abr-ng-gcG">
-                                <rect key="frame" x="100" y="97" width="214" height="128"/>
+                                <rect key="frame" x="100" y="97" width="214" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="krk-ta-8ze"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yta-Lx-beg">
-                                <rect key="frame" x="16" y="257" width="382" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Экран шутки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLi-Tk-3Pm">
+                                <rect key="frame" x="16" y="44" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Экран шутки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLi-Tk-3Pm">
-                                <rect key="frame" x="16" y="44" width="382" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yta-Lx-beg">
+                                <rect key="frame" x="16" y="227" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,12 +45,11 @@
                             <constraint firstItem="lO1-Lq-3c2" firstAttribute="trailing" secondItem="Yta-Lx-beg" secondAttribute="trailing" constant="16" id="QyX-d4-RXD"/>
                             <constraint firstItem="abr-ng-gcG" firstAttribute="centerX" secondItem="dHv-Ld-GZd" secondAttribute="centerX" id="UxP-AI-DWH"/>
                             <constraint firstItem="abr-ng-gcG" firstAttribute="centerX" secondItem="dHv-Ld-GZd" secondAttribute="centerX" id="YPX-aH-Urh"/>
+                            <constraint firstItem="Yta-Lx-beg" firstAttribute="top" secondItem="abr-ng-gcG" secondAttribute="bottom" constant="30" id="ZhL-j5-TVL"/>
                             <constraint firstItem="Yta-Lx-beg" firstAttribute="centerX" secondItem="dHv-Ld-GZd" secondAttribute="centerX" id="f4I-XL-cHo"/>
                             <constraint firstItem="lO1-Lq-3c2" firstAttribute="trailing" secondItem="abr-ng-gcG" secondAttribute="trailing" constant="100" id="hXa-Y7-CgE"/>
                             <constraint firstItem="WLi-Tk-3Pm" firstAttribute="top" secondItem="lO1-Lq-3c2" secondAttribute="top" id="iAL-n8-eKz"/>
                             <constraint firstItem="abr-ng-gcG" firstAttribute="top" secondItem="WLi-Tk-3Pm" secondAttribute="bottom" constant="32" id="kbD-JC-GEV"/>
-                            <constraint firstItem="lO1-Lq-3c2" firstAttribute="bottom" secondItem="Yta-Lx-beg" secondAttribute="bottom" priority="900" constant="584.5" id="qeW-4x-8qT"/>
-                            <constraint firstItem="Yta-Lx-beg" firstAttribute="top" secondItem="abr-ng-gcG" secondAttribute="bottom" priority="900" constant="32" id="uLe-il-VRt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oQf-fd-ERs"/>

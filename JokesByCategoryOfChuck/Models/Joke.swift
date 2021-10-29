@@ -10,6 +10,4 @@ import Foundation
 struct Joke: Codable {
     let icon_url: String
     let value: String
-    
-    
 }
