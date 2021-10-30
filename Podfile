@@ -6,6 +6,7 @@ target 'JokesByCategoryOfChuck' do
   use_frameworks!
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'SDWebImage', '~> 5.0'
+  pod 'Alamofire', '~> 5.4'
 
   # Pods for JokesByCategoryOfChuck
 
