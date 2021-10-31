@@ -10,12 +10,13 @@
 import Foundation
 import UIKit
 import MBProgressHUD
-import SDWebImage
+import Alamofire
 
 // MARK: View -
 protocol JokePresenterProtocol {
     var view: JokeViewProtocol? { get set }
     func viewDidLoad()
+    func updateJokeLabel()
 }
 
 class JokePresenter: JokePresenterProtocol {
@@ -30,26 +31,15 @@ class JokePresenter: JokePresenterProtocol {
     weak var view: JokeViewProtocol?
     
     func viewDidLoad() {
-        guard let url = URL(string: "https://api.chucknorris.io/jokes/random?category=\(category)") else {return}
-        let request = URLRequest(
-            url: url
-        )
-        URLSession.shared.dataTask(
-            with: request
-        ) { data, response, error in
-            guard let data = data else { return }
-            let decoder = JSONDecoder()
-            let joke = try? decoder.decode(Joke.self, from: data)
-            self.joke = joke
+        updateJokeLabel()
+    }
+    
+    func updateJokeLabel() {
+        AF.request("https://api.chucknorris.io/jokes/random?category=\(category)").responseDecodable(of: Joke.self) { (data) in
+            print(data)
+            self.joke = data.value
             DispatchQueue.main.async {
-//                self.view?.updateImageView(
-//                    with: try! Data(
-//                        contentsOf: URL(
-//                            string: joke!.icon_url
-//                        )!
-//                    )
-//                )
-                self.view?.updateJokeLabel(with: joke?.value ?? "")
+                self.view?.updateJokeLabel(with: self.joke!.value)
             }
         }.resume()
         

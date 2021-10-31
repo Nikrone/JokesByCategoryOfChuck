@@ -16,6 +16,7 @@ protocol CategoriesPresenterProtocol {
     var view: CategoriesViewProtocol? { get set }
     
     func viewDidLoad()
+    func updateOfCategories()
     func category(for indexPath: IndexPath) -> String
     func numberOfCategories() -> Int
 }
@@ -27,26 +28,18 @@ class CategoriesPresenter: CategoriesPresenterProtocol {
     private var categories: [String] = []
     
     func viewDidLoad() {
-                        guard let url = URL(string: "https://api.chucknorris.io/jokes/categories") else {return}
-                        let request = URLRequest(
-                            url: url
-                        )
-                        URLSession.shared.dataTask(
-                            with: request
-                        ) { data, response, error in
-                            guard let data = data else { return }
-                            let decoder = JSONDecoder()
-                            let categories = try? decoder.decode([String].self, from: data)
-                            self.categories = categories ?? []
-                            DispatchQueue.main.async {
-                                self.view?.reloadData()
-                            }
-                        }.resume()
-        
-//        AF.request("https://api.chucknorris.io/jokes/categories").response { response in
-//            let category = response.value
-//            self.categories = category
-//        }
+            updateOfCategories()
+            
+        }
+    
+    func updateOfCategories() {
+        AF.request("https://api.chucknorris.io/jokes/categories").responseJSON { (data) in
+            print(data)
+            self.categories = data.value as! [String]
+            DispatchQueue.main.async {
+                self.view?.reloadData()
+            }
+        }.resume()
     }
     
     func category(for indexPath: IndexPath) -> String {
