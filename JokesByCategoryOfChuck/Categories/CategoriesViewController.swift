@@ -27,6 +27,8 @@ class CategoriesViewController: UIViewController {
         
         presenter.view = self
         presenter.viewDidLoad()
+        tableView.register(UINib(nibName: "CustomCellTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
 }
 
@@ -45,17 +47,20 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
         presenter.numberOfCategories()
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = presenter.category(for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCellTableViewCell
+        cell.titleCell.text = presenter.category(for: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let jokeVC = UIStoryboard(name: "Joke", bundle: Bundle.main).instantiateViewController(withIdentifier: "JokeViewController") as? JokeViewController else {return}
+        guard let jokeVC = UIStoryboard(name: "Joke", bundle: Bundle.main).instantiateViewController(withIdentifier: "JokeViewController") as? JokeViewController else { return }
         jokeVC.presenter = JokePresenter(category: presenter.category(for: indexPath))
         navigationController?.pushViewController(jokeVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
 }

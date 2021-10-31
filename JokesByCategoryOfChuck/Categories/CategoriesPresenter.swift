@@ -11,6 +11,7 @@ import Foundation
 import UIKit
 import MBProgressHUD
 import Alamofire
+import CoreData
 
 protocol CategoriesPresenterProtocol {
     var view: CategoriesViewProtocol? { get set }
@@ -25,17 +26,19 @@ class CategoriesPresenter: CategoriesPresenterProtocol {
     
     weak var view: CategoriesViewProtocol?
     
+    private let random = "Random"
+    
     private var categories: [String] = []
     
     func viewDidLoad() {
             updateOfCategories()
-            
         }
     
     func updateOfCategories() {
         AF.request("https://api.chucknorris.io/jokes/categories").responseJSON { (data) in
             print(data)
             self.categories = data.value as! [String]
+            self.categories.insert(self.random, at: 0)
             DispatchQueue.main.async {
                 self.view?.reloadData()
             }
