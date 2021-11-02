@@ -24,18 +24,28 @@ class JokePresenter: JokePresenterProtocol {
     private let category: String
     private var joke: Joke?
     
-    init(category: String) {
-        self.category = category
+    init(category: String?) {
+        self.category = category ?? ""
     }
     
     weak var view: JokeViewProtocol?
     
     func viewDidLoad() {
         updateJokeLabel()
+// if let - проверка есть ли категории (выполняется или запрос категории или рандом)
+        
     }
     
     func updateJokeLabel() {
-        AF.request("https://api.chucknorris.io/jokes/random?category=\(category)").responseDecodable(of: Joke.self) { (data) in
+      let category = AF.request("https://api.chucknorris.io/jokes/random?category=\(category)").responseDecodable(of: Joke.self) { (data) in
+            print(data)
+            self.joke = data.value
+            DispatchQueue.main.async {
+                self.view?.updateJokeLabel(with: self.joke!.value)
+            }
+        }.resume()
+        
+       let randomCategory = AF.request("https://api.chucknorris.io/jokes/random").responseDecodable(of: Joke.self) { (data) in
             print(data)
             self.joke = data.value
             DispatchQueue.main.async {
@@ -45,4 +55,6 @@ class JokePresenter: JokePresenterProtocol {
         
         self.view?.updateImageView()
     }
+    
+    
 }

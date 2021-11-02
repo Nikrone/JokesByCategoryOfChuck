@@ -10,6 +10,7 @@
 		71068452272EB729002DA2ED /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71068450272EB728002DA2ED /* CustomCellTableViewCell.swift */; };
 		71068453272EB729002DA2ED /* CustomCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71068451272EB728002DA2ED /* CustomCellTableViewCell.xib */; };
 		717A5535272C4C9500C3513F /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A5534272C4C9500C3513F /* Categories.swift */; };
+		71CB729C2731AE2400A2A48D /* CategoryDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CB729A2731AE2400A2A48D /* CategoryDatabaseModel.swift */; };
 		71E7BA8227219083006F060F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA8127219083006F060F /* AppDelegate.swift */; };
 		71E7BA8427219083006F060F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA8327219083006F060F /* SceneDelegate.swift */; };
 		71E7BA8C27219083006F060F /* JokesByCategoryOfChuck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71E7BA8A27219083006F060F /* JokesByCategoryOfChuck.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 		71068450272EB728002DA2ED /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 		71068451272EB728002DA2ED /* CustomCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellTableViewCell.xib; sourceTree = "<group>"; };
 		717A5534272C4C9500C3513F /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		71CB729A2731AE2400A2A48D /* CategoryDatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryDatabaseModel.swift; path = JokesByCategoryOfChuck/Models/CategoryDatabaseModel.swift; sourceTree = SOURCE_ROOT; };
 		71E7BA7E27219083006F060F /* JokesByCategoryOfChuck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokesByCategoryOfChuck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E7BA8127219083006F060F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71E7BA8327219083006F060F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				717A5534272C4C9500C3513F /* Categories.swift */,
 				71E7BAA62722D54B006F060F /* Joke.swift */,
+				71CB729A2731AE2400A2A48D /* CategoryDatabaseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				71E7BAA32721992F006F060F /* JokePresenter.swift in Sources */,
 				717A5535272C4C9500C3513F /* Categories.swift in Sources */,
 				71E7BA8C27219083006F060F /* JokesByCategoryOfChuck.xcdatamodeld in Sources */,
+				71CB729C2731AE2400A2A48D /* CategoryDatabaseModel.swift in Sources */,
 				71E7BA9C27219323006F060F /* CategoriesPresenter.swift in Sources */,
 				71068452272EB729002DA2ED /* CustomCellTableViewCell.swift in Sources */,
 				71E7BAA72722D54B006F060F /* Joke.swift in Sources */,

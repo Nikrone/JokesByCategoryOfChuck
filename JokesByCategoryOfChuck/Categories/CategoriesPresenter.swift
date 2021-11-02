@@ -11,7 +11,6 @@ import Foundation
 import UIKit
 import MBProgressHUD
 import Alamofire
-import CoreData
 
 protocol CategoriesPresenterProtocol {
     var view: CategoriesViewProtocol? { get set }
@@ -28,7 +27,7 @@ class CategoriesPresenter: CategoriesPresenterProtocol {
     
     private let random = "Random"
     
-    private var categories: [String] = []
+     var categories: [String] = []
     
     func viewDidLoad() {
             updateOfCategories()
