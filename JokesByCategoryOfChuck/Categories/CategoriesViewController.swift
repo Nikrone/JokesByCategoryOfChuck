@@ -11,6 +11,7 @@ import UIKit
 
 protocol CategoriesViewProtocol: AnyObject {
     func reloadData()
+    func reloadTableView()
 }
 
 
@@ -33,6 +34,10 @@ class CategoriesViewController: UIViewController {
 }
 
 extension CategoriesViewController: CategoriesViewProtocol {
+    func reloadTableView() {
+        tableView.reloadData()
+    }
+    
     func reloadData() {
         activityIndicator.isHidden = true
         tableView.reloadData()

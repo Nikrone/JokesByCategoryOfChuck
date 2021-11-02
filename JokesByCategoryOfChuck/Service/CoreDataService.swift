@@ -32,13 +32,13 @@ class CoreDataStack {
     // Managed object model
     // swiftlint:disable force_unwrapping
     private lazy var managedObjectModel: NSManagedObjectModel = {
-        let url = Bundle.main.url(forResource: "Icotera", withExtension: "momd")!
+        let url = Bundle.main.url(forResource: "JokesByCategoryOfChuck", withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: url)!
     }()
     // swiftlint:enable force_unwrapping
     
     private lazy var persistentStoreDescription: NSPersistentStoreDescription = {
-        let databaseFileName = "Icotera.sqlite"
+        let databaseFileName = "JokesByCategoryOfChuck.sqlite"
         let url = self.applicationSupportDirectoryURL.appendingPathComponent(databaseFileName)
         
         let description = NSPersistentStoreDescription(url: url)

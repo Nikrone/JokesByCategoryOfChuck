@@ -31,7 +31,32 @@ class CategoriesPresenter: CategoriesPresenterProtocol {
     
     func viewDidLoad() {
             updateOfCategories()
+//        DatabaseService.shared.entitiesFor(
+//            type: CategoryDatabaseModel.self,
+//            context: DatabaseService.shared.persistentContainer.mainContext,
+//            closure: { category in
+//                self.categories = categories.map({ category in
+//                    return category.
+//                })
+//            })
         }
+    
+    
+    func category(for indexPath: IndexPath) -> String {
+        DatabaseService.shared.insertEntityFor(
+            type: CategoryDatabaseModel.self,
+            context: DatabaseService.shared.persistentContainer.mainContext,
+            closure: { category in
+                category.categories = category
+                DatabaseService.shared.saveMain(nil)
+            }
+        )
+        return categories[indexPath.row]
+    }
+    
+    func numberOfCategories() -> Int {
+        return categories.count
+    }
     
     func updateOfCategories() {
         AF.request("https://api.chucknorris.io/jokes/categories").responseJSON { (data) in
@@ -42,14 +67,6 @@ class CategoriesPresenter: CategoriesPresenterProtocol {
                 self.view?.reloadData()
             }
         }.resume()
-    }
-    
-    func category(for indexPath: IndexPath) -> String {
-        return categories[indexPath.row]
-    }
-    
-    func numberOfCategories() -> Int {
-        return categories.count
     }
     
     
