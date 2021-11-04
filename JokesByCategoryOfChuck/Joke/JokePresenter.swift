@@ -32,20 +32,22 @@ class JokePresenter: JokePresenterProtocol {
     
     func viewDidLoad() {
         updateJokeLabel()
-// if let - проверка есть ли категории (выполняется или запрос категории или рандом)
-        
+        if category.isEmpty {
+            AF.request("https://api.chucknorris.io/jokes/random").responseDecodable(of: Joke.self) { (data) in
+                print(data)
+                self.joke = data.value
+                DispatchQueue.main.async {
+                    self.view?.updateJokeLabel(with: self.joke!.value)
+                }
+            }.resume()
+            
+        } else {
+            return
+        }
     }
     
     func updateJokeLabel() {
-      let category = AF.request("https://api.chucknorris.io/jokes/random?category=\(category)").responseDecodable(of: Joke.self) { (data) in
-            print(data)
-            self.joke = data.value
-            DispatchQueue.main.async {
-                self.view?.updateJokeLabel(with: self.joke!.value)
-            }
-        }.resume()
-        
-       let randomCategory = AF.request("https://api.chucknorris.io/jokes/random").responseDecodable(of: Joke.self) { (data) in
+        AF.request("https://api.chucknorris.io/jokes/random?category=\(category)").responseDecodable(of: Joke.self) { (data) in
             print(data)
             self.joke = data.value
             DispatchQueue.main.async {
