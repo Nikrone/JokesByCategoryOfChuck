@@ -27,19 +27,19 @@ class CategoriesPresenter: CategoriesPresenterProtocol {
     
     private let random = "Random"
     
-     var categories: [String] = []
+    var categories: [String] = []
     
     func viewDidLoad() {
-            updateOfCategories()
-//        DatabaseService.shared.entitiesFor(
-//            type: CategoryDatabaseModel.self,
-//            context: DatabaseService.shared.persistentContainer.mainContext,
-//            closure: { category in
-//                self.categories = categories.map({ category in
-//                    return category.
-//                })
-//            })
-        }
+        updateOfCategories()
+        //        DatabaseService.shared.entitiesFor(
+        //            type: CategoryDatabaseModel.self,
+        //            context: DatabaseService.shared.persistentContainer.mainContext,
+        //            closure: { category in
+        //                self.categories = categories.map({ category in
+        //                    return category.
+        //                })
+        //            })
+    }
     
     
     func category(for indexPath: IndexPath) -> String {
@@ -67,6 +67,7 @@ class CategoriesPresenter: CategoriesPresenterProtocol {
                 self.view?.reloadData()
             }
         }.resume()
+        
     }
     
     

@@ -12,6 +12,7 @@ import UIKit
 protocol CategoriesViewProtocol: AnyObject {
     func reloadData()
     func reloadTableView()
+    func showAlert()
 }
 
 
@@ -34,6 +35,7 @@ class CategoriesViewController: UIViewController {
 }
 
 extension CategoriesViewController: CategoriesViewProtocol {
+    
     func reloadTableView() {
         tableView.reloadData()
     }
@@ -43,6 +45,13 @@ extension CategoriesViewController: CategoriesViewProtocol {
         tableView.reloadData()
     }
     
+    func showAlert() {
+        let alert = UIAlertController(title: "Error", message: "Category query error", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+
 
 }
 
